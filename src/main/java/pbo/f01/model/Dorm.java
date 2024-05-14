@@ -14,7 +14,7 @@ public class Dorm {
 
     private String gender;
 
-    @OneToMany(mappedBy = "dorm", cascade = CascadeType.ALL, orphanRemoval = true)
+    // @OneToMany(mappedBy = "dorm", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Student> students = new HashSet<>();
 
     // Constructors

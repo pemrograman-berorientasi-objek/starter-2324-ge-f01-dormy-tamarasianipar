@@ -4,3 +4,6 @@ SELECT 1 FROM STUDENT [42104-212]
 2024-05-14 16:28:45 jdbc[3]: exception
 org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DORM" not found; SQL statement:
 SELECT 1 FROM DORM [42102-212]
+2024-05-14 16:51:54 jdbc[3]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "DORM_STUDENT" not found; SQL statement:
+SELECT 1 FROM DORM_STUDENT [42102-212]
