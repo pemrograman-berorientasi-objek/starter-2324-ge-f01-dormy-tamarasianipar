@@ -3,16 +3,20 @@ package pbo.f01.model;
 import javax.persistence.*;
 
 @Entity
+@Table(name = "student")
 public class Student {
 
     @Id
+    @Column(name = "id", length = 255, nullable = false)
     private String id;
 
+    @Column(name = "student_name", length = 255, nullable = false)
     private String name;
 
-    @Column(name = "entrance_year")
+    @Column(name = "entrance_year", length = 255, nullable = false)
     private int entranceYear;
 
+    @Column(name = "gender", length = 255, nullable = false)
     private String gender;
 
     @ManyToOne

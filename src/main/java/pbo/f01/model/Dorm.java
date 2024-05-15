@@ -5,16 +5,20 @@ import java.util.HashSet;
 import java.util.Set;
 
 @Entity
+@Table(name = "dorm")
 public class Dorm {
 
     @Id
+    @Column(name = "name", length = 255, nullable = false)
     private String name;
 
+    @Column(name = "capacity", length = 255, nullable = false)
     private int capacity;
 
+    @Column(name = "gender", length = 255, nullable = false)
     private String gender;
 
-    // @OneToMany(mappedBy = "dorm", cascade = CascadeType.ALL, orphanRemoval = true)
+    @OneToMany(mappedBy = "dorm", cascade = CascadeType.ALL, orphanRemoval = true)
     private Set<Student> students = new HashSet<>();
 
     // Constructors
