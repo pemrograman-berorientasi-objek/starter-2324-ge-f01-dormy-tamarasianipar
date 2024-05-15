@@ -20,7 +20,6 @@ public class Student {
     private String gender;
 
     @ManyToOne
-    @JoinColumn(name = "dorm_name")
     private Dorm dorm;
 
     // Constructors
