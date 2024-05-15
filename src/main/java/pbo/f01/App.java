@@ -3,7 +3,9 @@ package pbo.f01;
 import pbo.f01.model.Dorm;
 import pbo.f01.model.Student;
 
-import javax.persistence.*;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.EntityManager;
+import javax.persistence.Persistence;
 import java.util.*;
 
 public class App {
