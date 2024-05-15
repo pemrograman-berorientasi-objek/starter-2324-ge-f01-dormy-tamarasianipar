@@ -4,10 +4,7 @@ import pbo.f01.model.Dorm;
 import pbo.f01.model.Student;
 
 import javax.persistence.*;
-import java.util.Comparator;
-import java.util.List;
-import java.util.Scanner;
-import java.util.stream.Collectors;
+import java.util.*;
 
 public class App {
     private static EntityManagerFactory emf;
@@ -112,8 +109,8 @@ public class App {
         for (Dorm dorm : dorms) {
             System.out.println(dorm.getName() + "|" + dorm.getGender() + "|" + dorm.getCapacity() + "|"
                     + dorm.getStudents().size());
-            List<Student> students = dorm.getStudents().stream().sorted(Comparator.comparing(Student::getName))
-                    .toList();
+            Set<Student> students = new TreeSet<Student>(Comparator.comparing(Student::getName));
+            students.addAll(dorm.getStudents());
             for (Student student : students) {
                 System.out.println(student.getId() + "|" + student.getName() + "|" + student.getEntranceYear());
             }
